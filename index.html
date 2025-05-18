@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ระบบรายงานผล กองช่างสุขาภิบาล</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ios-yellow: #ffe066;
+      --ios-footer: #fffbe7;
+      --ios-border: #f3cd4f;
+      --ios-btn: #ffd43b;
+      --ios-btn-hover: #ffec99;
+      --ios-text: #684d1e;
+      --ios-bg: #fffde6;
+    }
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--ios-bg);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--ios-yellow);
+      padding: 24px 0 12px 0;
+      text-align: center;
+      border-bottom: 2px solid var(--ios-border);
+    }
+    header img {
+      height: 100px;
+      width: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    h1 {
+      margin: 12px 0 0 0;
+      font-size: 2rem;
+      color: var(--ios-text);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    main {
+      flex: 1;
+      padding: 24px 10px 30px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .report-list {
+      width: 100%;
+      max-width: 500px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #ffe06655;
+      padding: 20px;
+      margin: 0 auto 30px auto;
+    }
+    .report-list h2 {
+      color: var(--ios-text);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    .report-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .report-list li {
+      border-bottom: 1px solid #ffe066;
+      padding: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .report-list li:last-child {
+      border-bottom: none;
+    }
+    .download-btn {
+      background: var(--ios-btn);
+      color: #333;
+      border: none;
+      border-radius: 24px;
+      padding: 7px 18px;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 1px 5px #ffec99;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .download-btn:hover {
+      background: var(--ios-btn-hover);
+    }
+    .assign-btn {
+      background: var(--ios-btn);
+      color: #684d1e;
+      border: none;
+      border-radius: 22px;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 8px 28px;
+      margin: 0 0 18px 0;
+      box-shadow: 0 1px 5px #ffec99;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .assign-btn:hover {
+      background: var(--ios-btn-hover);
+      transform: translateY(-2px) scale(1.04);
+      color: #444;
+    }
+    footer {
+      background: var(--ios-footer);
+      border-top: 2px solid var(--ios-border);
+      color: var(--ios-text);
+      text-align: center;
+      padding: 20px 10px 30px 10px;
+      font-size: 1rem;
+      position: relative;
+    }
+    @media (max-width: 600px) {
+      header img {
+        height: 70px;
+      }
+      .report-list {
+        padding: 12px;
+      }
+      footer {
+        font-size: 0.95rem;
+        padding-bottom: 18px;
+      }
+      .assign-btn {
+        font-size: 0.98rem;
+        padding: 7px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Seal_of_Ko_Samui.png" alt="Seal of Ko Samui" />
+    <h1>ระบบรายงานผล<br>กองช่างสุขาภิบาล</h1>
+  </header>
+  <main>
+    <section class="report-list">
+      <div style="text-align:center; margin-bottom: 18px;">
+        <a class="assign-btn" href="https://sanitaryinconplete.netlify.app" target="_blank">มอบหมายงานประจำวันดูดส้วม</a>
+      </div>
+      <h2>ดาวน์โหลดเอกสารรายงานผล</h2>
+      <ul>
+        <!-- รายการไฟล์ตัวอย่าง -->
+        <li>
+          รายงานผลการดำเนินงาน - พ.ค. 2568
+          <a href="https://example.com/report-may2025.pdf" class="download-btn" download>ดาวน์โหลด</a>
+        </li>
+        <li>
+          รายงานผลการดำเนินงาน - เม.ย. 2568
+          <a href="https://example.com/report-apr2025.pdf" class="download-btn" download>ดาวน์โหลด</a>
+        </li>
+        <!-- เพิ่มรายการไฟล์จริงได้ตามต้องการ -->
+      </ul>
+    </section>
+  </main>
+  <footer>
+    ©2025 ระบบรายงานผล กองช่างสุขาภิบาล โดย นายธีรศักดิ์ พูลเขาล้าน
+  </footer>
+</body>
+</html>
